@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.exomatik.classroom.classroom.Activity.BuatKelas"
+    android:background="@color/putihGelap1"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/customToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55.0dip"
+            android:background="@color/blue1">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25.0dip"
+                android:layout_height="30.0dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10.0dip"
+                android:src="@drawable/ic_back_white" />
+            <TextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25.0dip"
+                android:layout_toRightOf="@+id/back"
+                android:gravity="center_vertical"
+                android:text="Buat"
+                android:textColor="@color/putih"
+                android:textSize="17.0sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_help_white"
+                android:id="@+id/img_help"
+                android:elevation="@dimen/margin_elevation"
+                />
+        </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/sv_kelas"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:padding="@dimen/margin_small"
+            android:layout_below="@+id/customToolbar"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/border_rl_white"
+                android:padding="@dimen/margin_standard"
+                android:id="@+id/rl_background_nilai"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_et_gray"
+                    android:hint="Nama Kelas"
+                    android:textSize="@dimen/title_font"
+                    android:textColorHint="@color/hitam3"
+                    android:textColor="@color/hitam"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/et_nama_kelas"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:digits="asdfghjklqwertyuiopzxcvbnm1234567890ASDFGHJKLQWERTUIOPZXCVBNM "
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_et_gray"
+                    android:hint="Kelas"
+                    android:textSize="@dimen/title_font"
+                    android:textColor="@color/hitam"
+                    android:padding="@dimen/margin_small"
+                    android:id="@+id/et_desc_kelas"
+                    android:layout_below="@+id/et_nama_kelas"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColorHint="@color/hitam3"
+                    android:digits="asdfghjklqwertyuiopzxcvbnm1234567890ASDFGHJKLQWERTUIOPZXCVBNM "
+                    />
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rc_nilai"
+                    android:layout_below="@+id/et_desc_kelas"
+                    android:layout_marginTop="@dimen/margin_standard"
+                    >
+
+                </android.support.v7.widget.RecyclerView>
+                <LinearLayout
+                    android:id="@+id/ln_nilai1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_standard"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/rc_nilai"
+                    >
+
+                    <EditText
+                        android:id="@+id/et_nama_nilai"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_et_gray"
+                        android:hint="Nama"
+                        android:digits="asdfghjklqwertyuiopzxcvbnm1234567890ASDFGHJKLQWERTUIOPZXCVBNM "
+                        android:textColorHint="@color/hitam3"
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:textColor="@color/hitam2"
+                        android:textSize="@dimen/text_font"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_jumlah_nilai"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_weight="0.2"
+                        android:background="@drawable/border_et_gray"
+                        android:hint="Jumlah Nilai"
+                        android:textColorHint="@color/hitam3"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:textColor="@color/hitam2"
+                        android:textSize="@dimen/text_font"
+                        />
+                    <EditText
+                        android:id="@+id/et_persen_nilai"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:background="@drawable/border_et_gray"
+                        android:hint="Persentase Nilai"
+                        android:textColorHint="@color/hitam3"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:textColor="@color/hitam2"
+                        android:textSize="@dimen/text_font"
+                        />
+                </LinearLayout>
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:n3="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="8dp"
+                    android:layout_margin="@dimen/margin_standard"
+                    n3:civ_circle_background_color="@color/putih"
+                    n3:civ_border_width="@dimen/margin_small"
+                    n3:civ_border_color="@color/putih"
+                    android:src="@drawable/ic_add_blue"
+                    android:layout_below="@+id/ln_nilai1"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/img_add"
+                    />
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:n3="http://schemas.android.com/apk/res-auto"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="8dp"
+            android:layout_below="@+id/customToolbar"
+            android:layout_marginTop="@dimen/margin_standard"
+            n3:civ_circle_background_color="@color/putih"
+            n3:civ_border_width="@dimen/margin_small"
+            n3:civ_border_color="@color/putih"
+            android:src="@drawable/logo_blue"
+            />
+        <RelativeLayout
+            android:id="@+id/rl_buat"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sv_kelas"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/border_btn_blue"
+            android:padding="@dimen/margin_standard"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_white"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Buat Kelas"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/title_font" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_preview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_buat"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/border_btn_blue_white"
+            android:padding="@dimen/margin_standard"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_eye_black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Preview"
+                android:textColor="@color/hitam"
+                android:textSize="@dimen/title_font" />
+        </RelativeLayout>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_preview"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            >
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tb_buat_kelas"
+                >
+            </TableLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</ScrollView>

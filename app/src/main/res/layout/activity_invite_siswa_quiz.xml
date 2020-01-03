@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.exomatik.classroom.classroom.Activity.InviteSiswaQuiz"
+android:background="@drawable/blue_blur_background"
+    >
+<RelativeLayout
+    android:id="@+id/customToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="55.0dip"
+    android:background="@color/blue2">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="25.0dip"
+        android:layout_height="30.0dip"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10.0dip"
+        android:src="@drawable/ic_back_white" />
+
+    <TextView
+        android:id="@+id/text_title_anggota"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25.0dip"
+        android:layout_toRightOf="@+id/back"
+        android:gravity="center_vertical"
+        android:text="Invite"
+        android:textColor="@color/putih"
+        android:textSize="17.0sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_small"
+        android:src="@drawable/logo_white"
+        android:id="@+id/btn_help"
+        />
+</RelativeLayout>
+<android.support.v4.widget.NestedScrollView
+    android:id="@+id/sv_profile"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_small"
+    android:layout_below="@+id/customToolbar"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_rl_white"
+        android:padding="@dimen/margin_standard">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_standard"
+            android:text="Pilih Mahasiswa"
+            android:textColor="@color/hitam2"
+            android:textSize="@dimen/title_font"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/text_nothing"
+            android:layout_below="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_standard"
+            android:text="Anda belum mempunyai siswa"
+            android:textColor="@color/hitam2"
+            android:textSize="@dimen/text_font"
+            android:visibility="gone"
+            />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Light"
+            android:id="@+id/cb_check_all"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_siswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_title"
+            />
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/sv_profile"
+        android:background="@drawable/border_btn_blue"
+        android:layout_margin="@dimen/margin_standard"
+        android:id="@+id/btn_buat"
+        android:text="Buat Quiz"
+        android:textSize="@dimen/text_font"
+        android:textColor="@color/putih"
+        />
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_blur_background"
+    tools:context="com.exomatik.classroom.classroom.Activity.TambahKehadiran">
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/blue2"
+        android:elevation="@dimen/margin_elevation">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/text_title_anggota"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center_vertical"
+            android:text="Tambah Kehadiran"
+            android:textColor="@color/putih"
+            android:textSize="17.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:elevation="@dimen/margin_elevation"
+            android:src="@drawable/logo_white" />
+    </RelativeLayout>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/spinner_white_hitam"
+        android:id="@+id/spinner_hadir"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:popupBackground="@drawable/border_rl_white"
+        android:layout_margin="@dimen/margin_small"
+        android:layout_below="@+id/customToolbar"
+        >
+    </Spinner>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sv_kehadiran"
+        android:layout_below="@+id/spinner_hadir"
+        android:layout_margin="@dimen/margin_standard"
+        android:background="@drawable/border_rl_white"
+        android:elevation="@dimen/margin_elevation"
+        android:padding="@dimen/margin_standard"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rc_kehadiran"
+            >
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_simpan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_kehadiran"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/border_btn_blue"
+        android:padding="@dimen/margin_standard"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Simpan"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/title_font" />
+    </RelativeLayout>
+</RelativeLayout>

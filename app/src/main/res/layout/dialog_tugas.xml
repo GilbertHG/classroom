@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customdialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/margin_standard"
+    android:background="@drawable/border_rl_white"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text_title"
+        android:layout_margin="@dimen/margin_standard"
+        android:text="Buat Tugas"
+        android:textColor="@color/hitam1"
+        android:textSize="@dimen/title_font"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_red"
+        android:layout_alignParentRight="true"
+        android:id="@+id/img_dismiss"
+        />
+    <EditText
+        android:id="@+id/et_tambah"
+        android:layout_below="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_et_transparent_gray"
+        android:hint="Nama Tugas"
+        android:padding="@dimen/margin_standard"
+        android:singleLine="true"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/putihGelap2"
+        android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+        />
+
+    <EditText
+        android:id="@+id/et_desc"
+        android:layout_below="@+id/et_tambah"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_et_transparent_gray"
+        android:hint="Deskripsi Tugas atau Soal"
+        android:padding="@dimen/margin_standard"
+        android:textAlignment="textStart"
+        android:gravity="start"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/putihGelap2"
+        android:lines="3"
+        android:maxLines="5"
+        android:minLines="3"
+        android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ln_date_time"
+        android:layout_below="@+id/et_desc"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_small"
+        >
+        <EditText
+            android:id="@+id/et_tanggal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/border_et_transparent_gray"
+            android:hint="Tanggal"
+            android:padding="@dimen/margin_standard"
+            android:layout_marginRight="@dimen/margin_small"
+            android:singleLine="true"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/putihGelap2"
+            android:inputType="date"
+            />
+        <EditText
+            android:id="@+id/et_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="@drawable/border_et_transparent_gray"
+            android:hint="Waktu"
+            android:padding="@dimen/margin_standard"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:singleLine="true"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/putihGelap2"
+            android:inputType="time"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/dialog_tambah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ln_date_time"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:background="@drawable/border_btn_blue"
+        android:text="Tambah" />
+
+    <Button
+        android:id="@+id/dialog_hapus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialog_tambah"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:background="@drawable/border_btn_red"
+        android:text="HAPUS"
+        android:visibility="gone"
+        />
+
+</RelativeLayout>

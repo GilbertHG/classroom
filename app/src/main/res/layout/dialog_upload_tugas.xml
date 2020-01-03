@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customdialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/margin_standard"
+    android:background="@drawable/border_rl_white"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_nama"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/hitam1"
+        android:textSize="@dimen/title_font"
+        />
+
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_close_red" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_desc"
+        android:layout_below="@+id/text_nama"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:textColor="@color/hitam1"
+        android:textSize="@dimen/text_font"
+        />
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/text_desc"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:padding="@dimen/margin_standard"
+        android:background="@drawable/border_btn_blue_white"
+        android:text="Upload File (.PDF)"
+        android:textColor="@color/blue2"
+        />
+
+    <TextView
+        android:id="@+id/text_nama_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_upload"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:text="Tidak ada file yang dipilih"
+        android:textColor="@color/hitam2"
+        android:textSize="@dimen/text_font"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_upload"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_nama_file"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/border_btn_blue"
+        android:padding="@dimen/margin_standard"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_upload_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Kirim Tugas"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/title_font" />
+    </RelativeLayout>
+</RelativeLayout>

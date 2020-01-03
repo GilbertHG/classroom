@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.exomatik.classroom.classroom.Activity.BuatQuiz"
+    android:background="@color/putihGelap1"
+    >
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/blue1">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_back_white" />
+        <TextView
+            android:id="@+id/text_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center_vertical"
+            android:text="Buat"
+            android:textColor="@color/putih"
+            android:textSize="17.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_help_white"
+            android:id="@+id/img_help"
+            android:elevation="@dimen/margin_elevation"
+            />
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customToolbar"
+        android:layout_margin="@dimen/margin_small"
+        android:id="@+id/sv_quiz"
+        android:background="@drawable/border_rl_white"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buat Quiz"
+                android:textColor="@color/hitam1"
+                android:textSize="@dimen/title_font"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/text_title"
+                android:layout_marginTop="@dimen/margin_small"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_nama_quiz"
+                android:background="@drawable/border_et_gray"
+                android:layout_margin="@dimen/margin_small"
+                android:hint="Nama Quiz"
+                android:layout_below="@+id/text_title"
+                android:textColorHint="@color/hitam3"
+                android:textColor="@color/hitam1"
+                android:textSize="@dimen/title_font"
+                android:padding="@dimen/margin_small"
+                android:digits="asdfghjklzxcvbnmqwertyuiop1234567890 _ASDFGHJKLZXCVBNMQWERTYUIOP"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Anda belum membuat soal"
+                android:textColor="@color/hitam1"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/et_nama_quiz"
+                android:textSize="@dimen/text_font"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_standard"
+                android:visibility="gone"
+                android:id="@+id/text_nothing"
+                />
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rc_soal"
+                android:layout_below="@+id/et_nama_quiz"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sv_quiz"
+        android:id="@+id/btn_tambah_soal"
+        android:text="Tambah Soal"
+        android:textSize="@dimen/text_font"
+        android:textColor="@color/blue2"
+        android:background="@drawable/border_btn_blue_white"
+        android:layout_margin="@dimen/margin_small"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_tambah_soal"
+        android:id="@+id/btn_simpan"
+        android:text="Simpan Quiz"
+        android:textSize="@dimen/text_font"
+        android:textColor="@color/putih"
+        android:background="@drawable/border_btn_blue"
+        android:layout_margin="@dimen/margin_small"
+        />
+</RelativeLayout>

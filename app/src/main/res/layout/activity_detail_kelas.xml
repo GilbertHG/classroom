@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:n2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putihGelap1"
+    tools:context="com.exomatik.classroom.classroom.Activity.DetailKelas">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/customToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="#FFFFFF"
+            android:elevation="@dimen/margin_elevation">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_back_black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_toRightOf="@+id/back"
+                android:gravity="center_vertical"
+                android:text="Detail"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_help"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/ic_help_gray" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customToolbar"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/border_rl_blue"
+            android:elevation="4dp"
+            android:padding="@dimen/margin_standard">
+
+            <TextView
+                android:id="@+id/text_kelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="100dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:textAlignment="center"
+                android:textColor="@color/putih"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_kelas"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="Deskripsi Kelas        : "
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_jumlah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_desc"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="Jumlah Siswa          : "
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_pengajar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_jumlah"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="Nama Pengajar        : "
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_lihat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/text_pengajar"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:text="Privasi Nilai              : "
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_kelas"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/desc"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_desc_isi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/text_kelas"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/desc"
+                android:singleLine="true"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_jumlah_isi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_desc"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/desc"
+                android:singleLine="true"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <TextView
+                android:id="@+id/text_pengajar_isi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_jumlah"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginTop="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/desc"
+                android:singleLine="true"
+                android:textColor="@color/putih"
+                android:textSize="@dimen/text_font" />
+
+            <RadioGroup
+                android:id="@+id/rg_lihat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_pengajar"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_toRightOf="@+id/text_lihat"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/rb_true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Perlihatkan"
+                    android:textColor="@color/putih"
+                    android:textSize="@dimen/text_font" />
+
+                <RadioButton
+                    android:id="@+id/rb_false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sembunyikan"
+                    android:textColor="@color/putih"
+                    android:textSize="@dimen/text_font" />
+            </RadioGroup>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_kehadiran"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rg_lihat"
+                android:layout_margin="@dimen/margin_standard"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/hand_yellow"
+                android:visibility="gone"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_penilaian"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rg_lihat"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/img_kehadiran"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/logo_blue"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_generate_qr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rg_lihat"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/img_penilaian"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/qr_code_black"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_export"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/rg_lihat"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/img_generate_qr"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/ic_export_green"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_tugas"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/img_penilaian"
+                android:layout_margin="@dimen/margin_standard"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/ic_tugas_red"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_quiz"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/img_penilaian"
+                android:layout_toRightOf="@+id/img_tugas"
+                android:layout_margin="@dimen/margin_standard"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/ic_true_green"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_hapus"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/img_penilaian"
+                android:layout_margin="@dimen/margin_standard"
+                android:layout_toRightOf="@+id/img_quiz"
+                android:elevation="@dimen/margin_elevation"
+                android:src="@drawable/ic_hapus_red"
+                n2:civ_border_color="@color/putih"
+                n2:civ_border_width="@dimen/margin_small"
+                n2:civ_circle_background_color="@color/putih" />
+        </RelativeLayout>
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_detail"
+            android:layout_marginTop="@dimen/margin_standard"
+            android:fadingEdge="none"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <TableLayout
+                android:id="@+id/tb_lihat_kelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TableLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/text_nothing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="Anda belum mempunyai siswa"
+            android:textColor="@color/hitam1"
+            android:textSize="@dimen/text_font"
+            android:visibility="gone" />
+    </RelativeLayout>
+</ScrollView>

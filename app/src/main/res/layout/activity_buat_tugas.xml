@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.exomatik.classroom.classroom.Activity.BuatTugas"
+    android:background="@color/putihGelap1"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/blue2">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/text_title_anggota"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center_vertical"
+            android:text="Tugas"
+            android:textColor="@color/putih"
+            android:textSize="17.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/ic_help_gray"
+            android:id="@+id/btn_help"
+            />
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinner_tugas"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/spinner_blue_white"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:popupBackground="@drawable/border_rl_blue">
+    </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Belum ada siswa yang mengupload tugas"
+        android:textColor="@color/hitam1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:id="@+id/text_nothing_uploade"
+        android:visibility="gone"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sv_tugas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_tugas"
+        android:layout_margin="@dimen/margin_standard"
+        android:elevation="@dimen/margin_elevation"
+        android:padding="@dimen/margin_standard">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rc_tugas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.NestedScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anda belum memiliki tugas"
+        android:textColor="@color/hitam1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:id="@+id/text_nothing"
+        android:visibility="gone"
+        />
+    <RelativeLayout
+        android:id="@+id/rl_edit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/border_btn_blue_white"
+        android:padding="@dimen/margin_standard"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_edit_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Edit Tugas"
+            android:textColor="@color/hitam1"
+            android:textSize="@dimen/title_font" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_buat"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@drawable/border_btn_blue"
+        android:padding="@dimen/margin_standard">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Buat Tugas"
+            android:textColor="@color/putih"
+            android:textSize="@dimen/title_font" />
+    </RelativeLayout>
+
+</LinearLayout>

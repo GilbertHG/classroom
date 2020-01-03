@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+
+            <item>
+                <shape>
+                    <gradient android:angle="90"
+                        android:endColor="@color/putih"
+                        android:startColor="@color/putih"
+                        android:type="linear" />
+                    <corners android:radius="3dp" />
+
+                    <padding android:bottom="0dp"
+                        android:left="3dp"
+                        android:right="3dp"
+                        android:top="1dp"
+                        />
+                </shape>
+            </item>
+
+            <item>
+                <bitmap android:gravity="right"
+                    android:src="@drawable/ic_drop_hitam"/>
+            </item>
+
+        </layer-list>
+
+    </item>
+
+</selector>

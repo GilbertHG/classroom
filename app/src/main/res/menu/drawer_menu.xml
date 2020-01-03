@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:n1="http://schemas.android.com/apk/res/android"
+    >
+    <group
+        n1:checkableBehavior="single">
+        <item
+            n1:id="@+id/nav_kelas_ajar"
+            n1:icon="@drawable/kelas_ajar_black"
+            n1:title="Kelas Pengajar" />
+        <item
+            n1:id="@+id/nav_kelas_mahasiswa"
+            n1:icon="@drawable/kelas_mahasiswa_black"
+            n1:title="Kelas Murid" />
+    </group>
+    <group android:id="@+id/nav_grup_help"
+        android:checkableBehavior="single"
+        android:visible="true"
+        >
+        <item
+            n1:id="@+id/nav_quiz"
+            android:icon="@drawable/logo_black"
+            n1:title="Quis" />
+        <item
+            n1:id="@+id/nav_profile"
+            n1:icon="@drawable/ic_people_black"
+            n1:title="Profile" />
+    </group>
+</menu>

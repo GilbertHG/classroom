@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:n1="http://schemas.android.com/apk/res/android"
+    n1:id="@+id/drawer_layout"
+    n1:layout_width="fill_parent"
+    n1:layout_height="fill_parent"
+    n1:fitsSystemWindows="true">
+
+    <LinearLayout
+        n1:layout_width="fill_parent"
+        n1:layout_height="fill_parent"
+        n1:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar xmlns:n2="http://schemas.android.com/apk/res-auto"
+            n1:id="@+id/toolbar"
+            n1:layout_width="fill_parent"
+            n1:layout_height="?actionBarSize"
+            n1:background="@color/blue2"
+            n1:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            n2:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <FrameLayout
+            n1:id="@+id/fragment_container"
+            n1:layout_width="fill_parent"
+            n1:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView xmlns:n3="http://schemas.android.com/apk/res-auto"
+        n1:id="@+id/nav_view"
+        n1:layout_width="wrap_content"
+        n1:layout_height="fill_parent"
+        n1:layout_gravity="start"
+        n3:headerLayout="@layout/nav_header"
+        n3:menu="@menu/drawer_menu" />
+</android.support.v4.widget.DrawerLayout>

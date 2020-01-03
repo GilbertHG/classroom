@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:elastic="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/remote_pdf_root"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue2"
+    >
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/blue2">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/text_title_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center_vertical"
+            android:textColor="@color/putih"
+            android:textSize="17.0sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_standard"
+            android:src="@drawable/ic_download_white"
+            android:id="@+id/img_download"
+            />
+
+    </RelativeLayout>
+    <!--<RelativeLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/putih"-->
+            <!--android:id="@+id/text_progress"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--/>-->
+        <!--<is.arontibo.library.ElasticDownloadView-->
+            <!--android:id="@+id/elastic_download_view"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--elastic:backgroundColor="@color/green2"-->
+            <!--android:layout_below="@+id/text_progress"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--/>-->
+    <!--</RelativeLayout>-->
+</LinearLayout>

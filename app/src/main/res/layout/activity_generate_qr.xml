@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/putihGelap1">
+
+    <RelativeLayout
+        android:id="@id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/blue2">
+
+        <ImageView
+            android:id="@id/back"
+            android:layout_width="25.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/titleGenerate"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toRightOf="@id/back"
+            android:gravity="center_vertical"
+            android:text="Scan QR Code"
+            android:textColor="@color/putih"
+            android:textSize="17.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_help_white"
+            android:id="@+id/img_help"
+            android:elevation="@dimen/margin_elevation"
+            />
+    </RelativeLayout>
+    <!--<android.support.v4.widget.NestedScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@id/customToolbar"-->
+        <!--&gt;-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/customToolbar"
+            >
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/imageQR"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_margin="30.0dip" />
+
+            <RelativeLayout
+                android:id="@+id/rl_list_accept"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageQR"
+                android:layout_marginLeft="@dimen/margin_standard"
+                android:layout_marginRight="@dimen/margin_standard"
+                android:layout_marginBottom="@dimen/margin_standard"
+                android:background="@drawable/border_rl_white"
+                android:padding="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/text_mhs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/margin_standard"
+                    android:text="List Authentikasi Siswa"
+                    android:textColor="@color/hitam"
+                    android:textSize="@dimen/title_font" />
+                <TextView
+                    android:id="@+id/text_nothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/text_mhs"
+                    android:text="Tidak ada siswa yang masuk"
+                    android:textColor="@color/hitam2"
+                    android:textSize="@dimen/text_font"
+                    android:visibility="gone"
+                    />
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_mhs">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rc_list_accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text_mhs">
+
+                    </android.support.v7.widget.RecyclerView>
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    <!--</android.support.v4.widget.NestedScrollView>-->
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customdialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="@dimen/margin_standard"
+    android:background="@drawable/border_rl_blue"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/text_title"
+        android:layout_margin="@dimen/margin_standard"
+        android:text="Buat Soal"
+        android:textColor="@color/putih"
+        android:textSize="@dimen/title_font"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_close_red"
+        android:layout_alignParentRight="true"
+        android:id="@+id/img_dismiss"
+        />
+    <EditText
+        android:id="@+id/et_soal"
+        android:layout_below="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_et_transparent_gray"
+        android:hint="Deskripsikan soal Anda"
+        android:padding="@dimen/margin_standard"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/putihGelap2"
+        android:textSize="@dimen/text_font"
+        android:gravity="start"
+        android:lines="3"
+        android:maxLines="5"
+        android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+        />
+    <EditText
+        android:id="@+id/et_waktu"
+        android:layout_below="@+id/et_soal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_et_transparent_gray"
+        android:hint="Waktu Soal (dalam hitungan detik)"
+        android:padding="@dimen/margin_standard"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/hitam"
+        android:textColorHint="@color/putihGelap2"
+        android:textSize="@dimen/text_font"
+        android:gravity="start"
+        android:lines="1"
+        android:maxLines="1"
+        android:inputType="number"
+        />
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_waktu"
+        android:orientation="vertical"
+        android:id="@+id/rg_soal"
+        >
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/rb_jawaban_a"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/rb_jawaban_b"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/rb_jawaban_c"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/rb_jawaban_d"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_small"
+            />
+    </RadioGroup>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/rg_soal"
+        android:layout_below="@+id/et_waktu"
+        android:id="@+id/ln_soal"
+        >
+        <EditText
+            android:id="@+id/et_a"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border_et_transparent_gray"
+            android:hint="Jawaban A"
+            android:padding="@dimen/margin_standard"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/putihGelap2"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <EditText
+            android:id="@+id/et_b"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border_et_transparent_gray"
+            android:hint="Jawaban B"
+            android:padding="@dimen/margin_standard"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/putihGelap2"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <EditText
+            android:id="@+id/et_c"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border_et_transparent_gray"
+            android:hint="Jawaban C"
+            android:padding="@dimen/margin_standard"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/putihGelap2"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+            android:layout_marginTop="@dimen/margin_small"
+            />
+        <EditText
+            android:id="@+id/et_d"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/border_et_transparent_gray"
+            android:hint="Jawaban D"
+            android:padding="@dimen/margin_standard"
+            android:textColor="@color/hitam"
+            android:textColorHint="@color/putihGelap2"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:digits="asdfghjklzxcvbnmqwertyuiopASDFGHJKLZXCVBNMQWERTYUIOP123457890_ "
+            android:layout_marginTop="@dimen/margin_small"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/dialog_tambah"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ln_soal"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:background="@drawable/border_rl_blue_white"
+        android:text="Tambah Soal" />
+</RelativeLayout>

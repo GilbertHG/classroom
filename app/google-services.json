@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "631429277103",
+    "firebase_url": "https://classroom-edb35.firebaseio.com",
+    "project_id": "classroom-edb35",
+    "storage_bucket": "classroom-edb35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:631429277103:android:46ccad28133c48e8",
+        "android_client_info": {
+          "package_name": "com.exomatik.classroom.classroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "631429277103-d74daanmkrslrvsk4pj2b1jqgou4n6ub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.exomatik.classroom.classroom",
+            "certificate_hash": "6d09a41daf8e3ea3540b260ae1f4878b04cd8166"
+          }
+        },
+        {
+          "client_id": "631429277103-c6l923jtqijgb4s0o9dr63rince8dbpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0_wZtVj2Z3J0cSI9kYJ0lkHwokTQkXmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "631429277103-c6l923jtqijgb4s0o9dr63rince8dbpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

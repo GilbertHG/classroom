@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hitam"
+    tools:context="com.exomatik.classroom.classroom.Activity.LihatFoto">
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55.0dip"
+        android:background="@color/blue1">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="25.0dip"
+            android:layout_height="30.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@drawable/ic_back_white" />
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25.0dip"
+            android:layout_toRightOf="@+id/back"
+            android:gravity="center_vertical"
+            android:textColor="@color/putih"
+            android:textSize="17.0sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:src="@drawable/ic_download_white"
+            android:id="@+id/img_download"
+            />
+    </RelativeLayout>
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/img_foto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/customToolbar"
+        android:layout_margin="@dimen/margin_standard"
+        android:scaleType="centerInside"
+        />
+</RelativeLayout>

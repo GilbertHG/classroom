@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customdialog"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:padding="10dp"
+    android:layout_margin="@dimen/margin_standard"
+    android:background="@drawable/border_rl_white"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_close_red"
+            android:layout_alignParentRight="true"
+            android:id="@+id/img_dismiss"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Masuk Quiz"
+            android:textColor="@color/hitam1"
+            android:textSize="@dimen/title_font"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/text_title"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_tambah"
+            android:layout_below="@+id/text_title"
+            android:hint="Kode Quiz"
+            android:textColorHint="@color/putihGelap2"
+            android:textColor="@color/hitam"
+            android:background="@drawable/border_et_transparent_gray"
+            android:padding="@dimen/margin_standard"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/margin_standard"
+            />
+
+        <Button
+            android:id="@+id/dialog_tambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join"
+            android:layout_below="@+id/et_tambah"
+            android:background="@drawable/border_btn_blue"
+            android:layout_marginTop="@dimen/margin_standard"
+            />
+    </RelativeLayout>
+
+</ScrollView>

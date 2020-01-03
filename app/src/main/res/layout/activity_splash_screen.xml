@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.exomatik.classroom.classroom.Activity.SplashScreen"
+    android:background="@color/blue2"
+    >
+
+    <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+        android:id="@+id/google_progress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_big"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_maintenance"
+        android:text="Mohon Maaf, aplikasi sedang maintenance"
+        android:textColor="@color/putih"
+        android:textSize="@dimen/text_font"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_standard"
+        android:visibility="gone"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/text_splash"
+        android:text="Classroom | All Right Reserved 2019"
+        android:textColor="@color/putih"
+        android:textSize="@dimen/text_font"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_standard"
+        />
+</RelativeLayout>

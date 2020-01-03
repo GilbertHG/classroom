@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="progressLoader">
+
+        <item>@color/merah</item>
+        <item>@color/blue3</item>
+        <item>@color/kuning</item>
+        <item>@color/hijau</item>
+
+    </array>
+
+</resources>
